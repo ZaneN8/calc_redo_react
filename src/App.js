@@ -6,17 +6,19 @@ import Output from "./Output";
 
 class App extends React.Component {
   state = {
-    answer: "TEST",
+    answer: "DISPLAY",
   };
 
-  onClick() {}
+  handleClick = (name) => {
+    console.log("This is -", name);
+  };
 
   render() {
     return (
       <div>
         <h1>Calculator</h1>
         <Output answerProp={this.state.answer} />
-        <Buttons />
+        <Buttons handleClickProp={this.handleClick} />
       </div>
     );
   }

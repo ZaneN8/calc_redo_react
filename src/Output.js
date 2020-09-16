@@ -1,10 +1,7 @@
 import React from "react";
 
-class Output extends React.Component {
-  render(answerProp) {
-    const { answer } = this.props;
-    return <div>{answer}</div>;
-  }
-}
+const Output = ({ answerProp }) => {
+  return <div>{answerProp}</div>; // TODO return the live state
+};
 
 export default Output;
